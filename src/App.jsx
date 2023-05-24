@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import InputBar from './components/InputBar'
 import TodoList from './components/TodoList'
 
+
 function App() {
 
   const [tasks, setTasks] = useState(() => {
@@ -17,8 +18,6 @@ function App() {
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }, [tasks])
-
-
 
   function handleTasksChange(tasks) {
     setTasks(tasks)
@@ -36,8 +35,6 @@ function App() {
 }
 
 export default App
-
-
 
 const data = [
   {
